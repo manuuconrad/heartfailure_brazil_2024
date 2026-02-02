@@ -7,6 +7,13 @@ In Brazil, Heart Failure (HF) is a leading cause of hospitalization and a major 
 - The RJ vs. SP Paradox: Despite similar urban complexities, Rio de Janeiro consistently underperformed São Paulo every month of 2024. Since lethality is a percentage-based metric, this suggests that RJ's higher mortality is driven by system inefficiency (e.g., late-stage admissions or resource management) rather than mere population volume.
 - Data Integrity & Underreporting: Significant outliers were detected in states like Espírito Santo, where near-zero lethality in specific months suggests potential underreporting or delays in the SIH/SUS database, highlighting a challenge for real-time epidemiological surveillance.
 
+<p align="center">
+  <img src="Unknown-4.png" width="500" 
+  </p>
+<p align="center">
+  <img src="Unknown-5.png" width="500" title="Top 5 Lethality States">
+</p>
+
 ## 🛠️ Technologies & Methodology
 Language: Python 3.x
 Data Libraries: * Pandas: Cleaning and processing administrative datasets, handling Brazilian-specific numerical formatting (thousands separators), and feature engineering (Lethality Coefficient calculation).
