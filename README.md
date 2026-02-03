@@ -3,17 +3,25 @@
 In Brazil, Heart Failure (HF) is a leading cause of hospitalization and a major public health burden. While treatment protocols are well-established, in-hospital lethality remains a proxy for healthcare quality and system efficiency. This project evaluates the Hospital Lethality Rate: the ratio between hospital deaths and total admissions across all Brazilian states in 2024, identifying where the system fails to save patients once they are admitted.
 
 ## 📊 Key Analytical Insights
-- The Lethality Leaders: A critical efficiency gap was identified in Alagoas (3.26%) and Rio de Janeiro (3.01%), which recorded the highest mean lethality rates in the country. This indicates a severe disparity in clinical outcomes compared to the national average.
-- The RJ vs. SP Paradox: Despite similar urban complexities, Rio de Janeiro consistently underperformed São Paulo every month of 2024. Since lethality is a percentage-based metric, this suggests that RJ's higher mortality is driven by system inefficiency (e.g., late-stage admissions or resource management) rather than mere population volume.
-- Data Integrity & Underreporting: Significant outliers were detected in states like Espírito Santo, where near-zero lethality in specific months suggests potential underreporting or delays in the SIH/SUS database, highlighting a challenge for real-time epidemiological surveillance.
-
-<p align="center">
+### 1. The Demographic "Confounding Factor" (Gordis, Cap. 4)
+A critical discovery was made by crossing lethality with population age structure:
+* **The Alagoas Red Flag:** Alagoas recorded high lethality (~30%) despite having a significantly **younger population** (only 12.8% seniors). This identifies a critical hotspot for healthcare efficiency.
+* **The Rio de Janeiro Paradox:** While RJ also has high lethality (~30%), it has the highest percentage of seniors (16.9% aged 60+). According to the **Gordis methodology**, this suggests the rate is partially contextualized by a more fragile patient profile.
+ <p align="center">
   <img src="Unknown-4.png" width="500" 
   </p>
+
+   ### 2. Efficiency Benchmark: SP vs. RJ
+Despite similar urban complexities and aging populations, **São Paulo (15.4% seniors)** maintained a lethality rate of **18.4%**, nearly half of Rio's. This suggests that resource management in SP is more effective at decoupling aging from mortality.
+### 3. Data Integrity & Surveillance
+Significant outliers in states like Espírito Santo suggest potential underreporting or SIH/SUS database delays, highlighting challenges for real-time epidemiological surveillance.
+
 <p align="center">
-  <img src="Unknown-5.png" width="500" title="Top 5 Lethality States">
+  <img src="Unknown.png" width="500" 
 </p>
 
+  The following visualization crosses lethality rates with the percentage of the senior population (60+). This allows us to distinguish between mortality caused by biological fragility (aging) and mortality potentially caused by healthcare system gaps.
+  
 ## 🛠️ Technologies & Methodology
 - Language: Python 3.x
 - Data Libraries: * Pandas: Cleaning and processing administrative datasets, handling Brazilian-specific numerical formatting (thousands separators), and feature engineering (Lethality Coefficient calculation).
